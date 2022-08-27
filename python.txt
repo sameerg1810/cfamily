@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>C-FAMILY::Courses::C</title><link rel="icon" type="image/x-icon" href="D:\Cwebsite\WP1_files\Titlel.png">
+<meta charset="UTF-8">
+<link rel="stylesheet" ">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<style>
+.btnSubmit {
+        width: 50%;
+        border-radius: 1rem;
+        padding: 1.5%;
+        color: #fff;
+        background-color: #03612e;
+        border: none;
+        cursor: pointer;
+        margin-right: 6%;
+        color: rgb(246, 246, 252);
+        margin-top: 4%;
+      }
+/* for desktop */
+.whatsapp_float {
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+        font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+        z-index:100;
+}
+
+.whatsapp-icon {
+	margin-top:16px;
+}
+/* for mobile */
+@media screen and (max-width: 767px){
+     .whatsapp-icon {
+	 margin-top:10px;
+     }
+    .whatsapp_float {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 10px;
+        font-size: 22px;
+    }
+}
+img{object-fit: cover;}
+h1 {
+  font-size: 30px;
+color: black;
+}
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid red;
+}
+
+ul {
+  list-style-type: none;
+  margin: 4;
+  padding: 5;
+}
+.p-bar{
+ float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+ 
+}
+.p-bar a:hover {
+  background-color: #ddd;
+  color: pink;
+}
+.p-top{
+ float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 26px;
+  text-decoration: none;
+ font-size: 25px;
+  line-height: 50px;
+
+ 
+}
+.p-top a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.p-center{
+ float: center
+  color: #f2f2f2;
+  text-align: left;
+  padding: 20px 20px;
+  text-decoration: none;
+ font-size: 25px;
+ 
+
+ 
+}
+.p-center a:hover {
+  background-color: #ddd;
+  color: blue;
+}
+span {
+  display: block;
+}
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+.p1 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.p2 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.h2 {
+  font-family: "Lucida Console", "Courier New", monospace;
+ color: #00008B;
+  text-align: left;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 30px;
+ 
+}
+div {
+
+  background-color: lightgrey;
+
+  padding: 15px 15px 17px 20px;
+}
+table, th, td {
+  border: 1px solid;
+text-align: center;
+ padding: 15px;
+ border-bottom: 1px solid #ddd;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+tr:hover {background-color: coral;}
+th {
+  background-color: #04AA6D;
+  color: white;
+}
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+@media only screen and (max-width:900px) {
+  /* For mobiles: */
+  .p-top,.p-center,.p-bar,img,table, th, td {
+    width: 80%;
+    padding: 10;
+
+  }
+  div{
+    width:100%;
+
+ padding: 20;
+  }
+
+}
+@media only screen and (max-width:1200px) {
+  /* For tablets: */
+  .p-top,.p-center,.p-bar,img{
+    width: 80%;
+    padding: 10;
+
+  }
+  .menu,.button,.rightD,div,img,table, th, td {
+    width:100%;
+
+ padding: 20;
+  }
+
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+ .p-top,.p-center,.p-bar,img,table, th, td {
+    width: 100%;
+height: 150%;
+padding: 10;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="p-top">
+  <div class="p-bar P-white P-padding P-card" style="letter-spacing:4px;">
+    <a href="D:\Cwebsite\WP1.html" class="p-bar-item p-button">HOME</a>
+
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="p-right p-hide-small">
+      <a href="#about" class="p-bar-item p-button">ABOUT</a>
+      <a href="#syllabus" class="p-bar-item p-button">SYLLABUS</a>
+      <a href="#downloads" class="p-bar-item p-button">DOWNLOADS</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="p-display-container p-content p-wide" style="max-width:800px;min-width:50px" id="home">
+  <img class="p-image" src="D:\Cwebsite\WP1_files\python.gif" alt="" width="400" height="300">
+  <div class="p-display-bottomleft p-padding-large p-opacity">
+<!-- Page content -->
+<div class="p-content" style="max-width:1100px">
+ <h1 class="p-xxlarge">PYTHON</h1>
+ <div class="p-col m6 p-padding-large p-hide-small">
+     <p1 class="p-large p-text-grey p-hide-medium"> <span class="p-tag w3-light-grey">Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Its high-level built in data structures, combined with dynamic typing and dynamic binding, make it very attractive for Rapid Application Development, as well as for use as a scripting or glue language to connect existing components together. Python's simple, easy to learn syntax emphasizes readability and therefore reduces the cost of program maintenance. Python supports modules and packages, which encourages program modularity and code reuse. The Python interpreter and the extensive standard library are available in source or binary form without charge for all major platforms, and can be freely distributed.
+
+Often, programmers fall in love with Python because of the increased productivity it provides. Since there is no compilation step, the edit-test-debug cycle is incredibly fast. Debugging Python programs is easy: a bug or bad input will never cause a segmentation fault. Instead, when the interpreter discovers an error, it raises an exception. When the program doesn't catch the exception, the interpreter prints a stack trace. A source level debugger allows inspection of local and global variables, evaluation of arbitrary expressions, setting breakpoints, stepping through the code a line at a time, and so on. The debugger is written in Python itself, testifying to Python's introspective power. On the other hand, often the quickest way to debug a program is to add a few print statements to the source: the fast edit-test-debug cycle makes this simple approach very effective.
+    </div>
+    </div>
+  </div>
+
+    <div class="p-col m6 p-padding-large">
+      <h2 class="p-center">Syllabus</h2><br>
+<!-- About Section -->
+  <div class="p-row p-padding-64" id="about">
+ <ol><hr><font face="mistral" size="4" color="red">
+<li>An Introduction to Python</li>
+<li> Beginning Python Basics</li>
+<li> Python Program Flow</li>
+<li> Functions& Modules</li>
+<li>Exceptions Handling</li>
+<li>File Handling</li>
+<li>Classes In Python</li>
+<li>Generators and iterators</li>
+</ol>
+<hr></font></ol>
+  </div>
+ 
+<!-- Duration Section -->
+  <div class="p-container p-padding-94">
+ <h1>DURATION</h1> 	
+<table>
+  <tr>
+    <th>DURATION</th>
+<th>TRACK</th>
+  </tr>
+  <tr>
+    <td>45 DAYS </td>
+    <td>NORMAL TRACK</td>
+  </tr>
+  <tr>
+    <td>30 DAYS</td>
+    <td>FAST TRACK</td>
+  </tr>
+<table/>
+<hr></hr>
+
+
+  
+ <table> <hr></hr>
+  <!-- DOWNLOADS Section -->
+  <div class="p-container p-padding-64" id="download">
+ <h1>DOWNLOADS</h1> 
+<table>
+  <tr>
+    <th>Content</th>
+    <th>Links</th>
+  </tr>
+  <tr>
+    <td>"       "</td>
+    <td>"        "</td>
+  </tr>
+  <tr>
+    <td>"        "</td>
+    <td>"         "</td>
+  </tr>
+<tr>
+    <td>"       "</td>
+    <td>"        "</td>
+  </tr>
+  <tr>
+    <td>"        "</td>
+    <td>"         "</td>
+  </tr>
+<tr>
+    <td>"       "</td>
+    <td>"        "</td>
+  </tr>
+  <tr>
+    <td>"        "</td>
+    <td>"         "</td>
+  </tr>
+</table> 
+  </div>
+ <div> 
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="p-center p-light-grey p-padding-32">
+<hr></hr>
+<h2>ARE YOU INTRESTED IN THE COURSE? Then register here </h2>
+<form>
+  <label for="fname">First Name</label>
+  <input type="text" id="fname" name="fname">
+  <label for="lname">Last Name</label>
+  <input type="text" id="lname" name="lname">
+
+  <label for="phone">Enter your 10 digit phone number:</label><br><br>
+  <input type="tel" id="phone" name="phone number" placeholder="123-4567-890" pattern="[0-9]{10}" required><br><br>
+  <small>Format: 909-0103-011</small><br><br>
+<script>
+function gotowhatsapp() {
+    
+    var name = document.getElementById("name").value;
+    var phone = document.getElementById("phone").value;
+   
+
+    var url = "https://wa.me/918789529215?text=" 
+    + "Name: " + name + "%0a"
+    + "Phone: " + phone + "%0a"
+    
+
+
+    window.open(url, '_blank').focus();
+}
+</script>
+ <input
+        type="submit"
+         name="submit"
+        class="btnSubmit btn-block"
+        value="Submit"
+                    />
+  <a href="https://wa.me/919440030405" class="whatsapp_float" target="_blank" ?text="Hi %20 Iam intrested in C-language"> <i class="fa fa-whatsapp whatsapp-icon"></a></i>
+
+</form>
+  <p>contact gmail<a href="https:/" title="p.CSS" target="_blank" class="p-hover-text-green">gmail</a></p>
+</footer>
+
+</body>
+</html>

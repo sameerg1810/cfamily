@@ -1,0 +1,75 @@
+CSS aniamtions and styling:
+accent-color
+align content
+align items
+align self
+animation
+backdrop filter
+background
+background blend mode
+background clip
+background color
+background image
+background origin
+background position
+background repeat
+background size
+border
+border bottom
+border bottom color
+border bottom left raduis
+border bottom right raduis
+border bottom style
+border bottom width
+border collapse
+border color
+border image
+border image outset
+border image repeat
+border image slice
+border image source
+border image width
+border left
+border left color
+border left style
+border left width
+border raduis
+border right 
+border right color
+border right style
+bordder right width
+border spacing 
+border style
+border top
+border top color
+border top left raduis
+border top right raduis
+border top style
+border top width
+border top width
+bottom
+box shadows
+box sizing
+caption side
+clear
+clip
+clip path
+color
+column count
+column fill
+column gap
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

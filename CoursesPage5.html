@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>C-FAMILY::Courses::C</title><link rel="icon" type="image/x-icon" href="Titlel.png">
+<meta charset="UTF-8">
+<link rel="stylesheet" ">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+ <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+<style>
+<!----CSS---->
+ .register .nav-tabs .nav-link:hover {
+        border: none;
+      }
+      .text-align {
+        margin-top: -3%;
+        margin-bottom: -9%;
+
+        padding: 10%;
+        margin-left: 30%;
+      }
+      .form-new {
+        margin-right: 22%;
+        margin-left: 20%;
+      }
+      .register-heading {
+        margin-left: 21%;
+        margin-bottom: 10%;
+        color: #e9ecef;
+      }
+      .register-heading h1 {
+        margin-left: 21%;
+        margin-bottom: 10%;
+        color: #e9ecef;
+      }
+      .register {
+        background: -webkit-linear-gradient(left, #055a4f, #00c6ff);
+        margin-top: 3%;
+        padding: 3%;
+        border-radius: 2.5rem;
+      }
+<!----SUBMIT BUTTON---->
+.btnSubmit {
+        width: 50%;
+        border-radius: 1rem;
+        padding: 1.5%;
+        color: #fff;
+        background-color: #03612e;
+        border: none;
+        cursor: pointer;
+        margin-right: 6%;
+        color: rgb(246, 246, 252);
+        margin-top: 4%;
+      }
+<!----Whattsapp icon---->
+/* for desktop */
+.whatsapp_float {
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+        font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+        z-index:120;
+}
+
+.whatsapp-icon {
+	margin-top:16px;
+}
+/* for mobile */
+@media screen and (max-width: 760px){
+     .whatsapp-icon {
+	 margin-top:10px;
+     }
+    .whatsapp_float {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 10px;
+        font-size: 52px;
+    }
+}
+img{object-fit: cover;}
+h1 {
+  font-size: 60px;
+color: black;
+}
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid red;
+}
+
+ul {
+  list-style-type: none;
+  margin: 4;
+  padding: 5;
+}
+
+<!----paragraph design---->
+.p-bar{
+ float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+ font-size: 55px;
+
+ 
+}
+.p-bar a:hover {
+  background-color: #ddd;
+  color: pink;
+}
+.p-top{
+ float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 26px;
+  text-decoration: none;
+ font-size: 45px;
+  line-height: 50px;
+
+ 
+}
+.p-top a:hover {
+  background-color: #ddd;
+  color: black;
+ font-size: 45px;
+}
+.p-center{
+ float: center
+  color: #f2f2f2;
+  text-align: left;
+  padding: 20px 20px;
+  text-decoration: none;
+ font-size: 45px;
+ 
+
+ 
+}
+.p-center a:hover {
+  background-color: #ddd;
+  color: blue;
+}
+span {
+  display: block;
+}
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+.p1 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.p2 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.h2 {
+  font-family: "Lucida Console", "Courier New", monospace;
+ color: #00008B;
+  text-align: left;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 45px;
+ 
+}
+div {
+
+  background-color: lightgrey;
+
+  padding: 15px 15px 17px 20px;
+}
+table, th, td {
+  border: 1px solid;
+text-align: center;
+ padding: 15px;
+ border-bottom: 1px solid #ddd;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+tr:hover {background-color: coral;}
+th {
+  background-color: #04AA6D;
+  color: white;
+}
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+@media only screen and (max-width:900px) {
+  /* For mobiles: */
+  .p-top,.p-center,.p-bar,img,table, th, td {
+    width: 80%;
+    padding: 10;
+
+  }
+  div{
+    width:100%;
+
+ padding: 20;
+  }
+
+}
+@media only screen and (max-width:1200px) {
+  /* For tablets: */
+  .p-top,.p-center,.p-bar,img{
+    width: 80%;
+    padding: 10;
+
+  }
+  .menu,.button,.rightD,div,img,table, th, td {
+    width:100%;
+
+ padding: 20;
+  }
+
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+ .p-top,.p-center,.p-bar,img,table, th, td {
+    width: 100%;
+height: 150%;
+padding: 10;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="p-top">
+  <div class="p-bar P-white P-padding P-card" style="letter-spacing:3px;">
+    <a href="index.html" class="p-bar-item p-button">HOME</a>
+<hr></hr>
+
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="p-right p-hide-small">
+      <a href="#about" class="p-bar-item p-button">ABOUT</a>
+<hr></hr>
+      <a href="#syllabus" class="p-bar-item p-button">SYLLABUS</a>
+<hr></hr>
+      <a href="#downloads" class="p-bar-item p-button">DOWNLOADS</a>
+<hr></hr>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="p-display-container p-content p-wide" style="max-width:800px;min-width:55px" id="home">
+  <img class="p-image" src="Oracle.gif" alt="" width="400" height="300">
+  <div class="p-display-bottomleft p-padding-large p-opacity">
+<!-- Page content -->
+<div class="p-content" style="max-width:1100px" id="about">
+ <h1 class="p-xxlarge">PYTHON</h1>
+ <div class="p-col m6 p-padding-large p-hide-small">
+     <p1 class="p-large p-text-grey p-hide-medium" style="font-size:40px"><span class="p-tag w3-light-grey">Database management system is a specialized
+software package that can efficiently maintain considerably huge data.Among all available database packages,Oracle is widely used and highly 
+preferred.The power of Oracle lies in its excellent performance,security,and network support capabilities.That's why it is on the top.
+The Oracle software is accompained by some powerful tools like SQL,PL/SQL,
+forms,reports etc.,These tools are  so advantageous that one can build an entire project
+with only Oracle package without finding a need for other programming languages.</p>
+    </div>
+    </div>
+  </div>
+
+    <div class="p-col m6 p-padding-large">
+      <h2 class="p-center" id="syllabus">Syllabus</h2><br>
+<!-- About Section -->
+  <div class="p-row p-padding-64" id="syllabus">
+ <ol><hr><font face="mistral" size="10" color="red">
+<li>DBMS concepts</li>
+<li>databases</li>
+<li>data Dictionaries</li>
+<li>schema</li>
+<li>relationships</li>
+<li>normalization</li>
+<li>data integrity</li>
+<li>ER model</li>
+<li>relational and other databases</li>
+<li>introduction to Oracle</li>
+<li>SQL*Plus</li>
+<li>Introduction</li>
+<li>DDL</li>
+<li>DML</li>
+<li>TCL</li>
+<li>SQL functions</li>
+<li>set operators & joins</li>
+<li>Red and Black trees</li>
+<li>sub quires & nested quires</li>
+<li>database objects</li>
+<li>locks</li>
+<li>PL/SQL:Introduction,programming basics</li>
+<li>control structures</li>
+<li>Error handling,cursor& triggers</li>
+<li>sub programs & packages</li>
+<li>Introduction to database administration</li></ol>
+<hr></font></ol>
+  </div>
+ 
+<!-- Duration Section -->
+  <div class="p-container p-padding-94">
+ <h1 style="font-size:40px">DURATION</h1> 	
+<table>
+  <tr>
+    <th style="font-size:40px">DURATION</th>
+<th style="font-size:40px">TRACK</th>
+  </tr>
+  <tr>
+    <td>45 DAYS </td>
+    <td>NORMAL TRACK</td>
+  </tr>
+  <tr>
+    <td>30 DAYS</td>
+    <td>FAST TRACK</td>
+  </tr>
+<table/>
+<hr></hr>
+
+
+  
+ <table> <hr></hr>
+  <!-- DOWNLOADS Section -->
+  <div class="p-container p-padding-64" id="downloads">
+ <h1 style="font-size:40px">DOWNLOADS</h1> 
+<table>
+  <tr>
+    <th style="font-size:40px">Content</th>
+    <th style="font-size:40px">Links</th>
+  </tr>
+  <tr>
+    <td>"       "</td>
+    <td>"        "</td>
+  </tr>
+  <tr>
+    <td>"        "</td>
+    <td>"         "</td>
+  </tr>
+<tr>
+    <td>"       "</td>
+    <td>"        "</td>
+  </tr>
+  <tr>
+    <td>"        "</td>
+    <td>"         "</td>
+  </tr>
+<tr>
+    <td>"       "</td>
+    <td>"        "</td>
+  </tr>
+  <tr>
+    <td>"        "</td>
+    <td>"         "</td>
+  </tr>
+</table> 
+  </div>
+ <div> 
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="p-center p-light-grey p-padding-32">
+<hr></hr>
+<h2>ARE YOU INTRESTED IN THE COURSE? Then register here </h2>
+
+  
+<script>
+function gotowhatsapp() {
+    
+    var name = document.getElementById("name").value;
+    var phone = document.getElementById("phone").value;
+    var email = document.getElementById("email").value;
+    var course = document.getElementById("course").value;
+
+    var url = "https://wa.me/919440030405?text=Hi%20There!" 
+    + "Name: " + name + "%0a"
+    + "Phone: " + phone + "%0a"
+    + "Email: " + email  + "%0a"
+    + "Course: " + course; 
+
+    window.open(url, '_blank').focus();
+}
+</script>
+            <div class="row register-form">
+              <div class="col-md-12">
+                <form autocomplete="off">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="Name"
+                      id="name"
+                      class="form-control"
+                      placeholder="Your Name *"
+                      value=""
+                      required=""
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="Email"
+                      id="email"
+                      class="form-control"
+                      placeholder="Your Email *"
+                      value=""
+                      required=""
+                    />
+                  </div>
+                  <div class="form-group">
+                   
+<input type="tel"  placeholder=" Phone number(123-4567-890)" pattern="[0-9]{10}" 
+  Format: 909-0103-011
+                      type="number"
+                      name="Phone"
+                      id="phone"
+                      class="form-control"
+                      value=""
+                      required=""
+                    />
+                  </div>
+                  <div class="form-group">
+                    <select class="form-control" id="course">
+                      <option>Default select</option>
+                      <option>C</option>
+                      <option>C++</option>
+                      <option>JAVA</option>
+                      <option>DATA-STRUCTURES</option>
+                      <option>PYTHON</option>
+							 <option>ORACLE</option>
+							<option>SPECIAL PACKAGE</option>
+                      
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <input
+                      type="submit"
+                       onclick="gotowhatsapp()"
+                      name="submit"
+                      class="btnSubmit btn-block"
+                      value="Submit"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+</script>
+
+  <a href="https://wa.me/919440030405" class="whatsapp_float" target="_blank" ?text="Hi %20 Iam intrested in C-language"> <i class="fa fa-whatsapp whatsapp-icon"></a></i>
+
+</form>
+<a href="https://wa.me/919440030405" class="whatsapp_float" target="_blank" ?text="Hi %20 Iam intrested in C-language"> <i class="fa fa-whatsapp whatsapp-icon"></a></i>
+  <p>contact gmail<a href="https:/" title="p.CSS" target="_blank" class="p-hover-text-green">gmail</a></p>
+</footer>
+
+</body>
+</html>

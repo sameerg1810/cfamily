@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)file:///D:/Cwebsite/WP1.html -->
+<html><head> <title>C-FAMILY::HOME</title> <link rel="icon" type="image/x-icon" href="D:\Cwebsite\WP1_files\Titlel.png"><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><style>
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="styles.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+}
+::selection{
+  background: #fa4299;
+  color: #fff;
+}
+.wrapper{
+  overflow: hidden;
+  max-width: 390px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+}
+.wrapper .title-text{
+  display: flex;
+  width: 200%;
+}
+.wrapper .title{
+  width: 50%;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.wrapper .slide-controls{
+  position: relative;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  overflow: hidden;
+  margin: 30px 0 10px 0;
+  justify-content: space-between;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+.slide-controls .slide{
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 48px;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.6s ease;
+}
+.slide-controls label.signup{
+  color: #000;
+}
+.slide-controls .slider-tab{
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 0;
+  z-index: 0;
+  border-radius: 5px;
+  background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+input[type="radio"]{
+  display: none;
+}
+#signup:checked ~ .slider-tab{
+  left: 50%;
+}
+#signup:checked ~ label.mail{
+  color: #fff;
+  cursor: default;
+  user-select: none;
+}
+#signup:checked ~ label.contact{
+  color: #000;
+}
+#login:checked ~ label.mail{
+  color: #000;
+}
+#login:checked ~ label.contact{
+  cursor: default;
+  user-select: none;
+}
+.wrapper .form-container{
+  width: 100%;
+  overflow: hidden;
+}
+.form-container .form-inner{
+  display: flex;
+  width: 200%;
+}
+.form-container .form-inner form{
+  width: 50%;
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.form-inner form .field{
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+}
+.form-inner form .field input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 15px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  border-bottom-width: 2px;
+  font-size: 17px;
+  transition: all 0.3s ease;
+}
+.form-inner form .field input:focus{
+  border-color: #fc83bb;
+  /* box-shadow: inset 0 0 3px #fb6aae; */
+}
+.form-inner form .field input::placeholder{
+  color: #999;
+  transition: all 0.3s ease;
+}
+form .field input:focus::placeholder{
+  color: #b3b3b3;
+}
+.form-inner form .pass-link{
+  margin-top: 5px;
+}
+.form-inner form .signup-link{
+  text-align: center;
+  margin-top: 30px;
+}
+.form-inner form .pass-link a,
+.form-inner form .signup-link a{
+  color: #fa4299;
+  text-decoration: none;
+}
+.form-inner form .pass-link a:hover,
+.form-inner form .signup-link a:hover{
+  text-decoration: underline;
+}
+form .btn{
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+form .btn .btn-layer{
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  background: -webkit-linear-gradient(right, #a445b2, #fa4299, #a445b2, #fa4299);
+  border-radius: 5px;
+  transition: all 0.4s ease;;
+}
+form .btn:hover .btn-layer{
+  left: 0;
+}
+form .btn input[type="submit"]{
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  background: none;
+  border: none;
+  color: #fff;
+  padding-left: 0;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  width: 500px;
+  max-width: 80%;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 10px 15px;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+#myDIV {
+  height:300px;
+  font-family:cursive;
+}
+
+div {
+  border: 0 px solid Blue;
+}
+</style>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body style="font-family:cursive;" padding:5px height=" 1";><h5><center><img src="D:\Cwebsite\WP1_files\CFamily.gif" width="320" height="150"></center></h5>
+<center><div id="myDIV "><h9 style="font-size:30px">Computer Education<br>***Our Professional Training Builds your Professional Skills***</h9></div></center>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+img {
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+object-fit: cover;
+}
+
+body  {
+    background: linear-gradient(270deg, #3bbed4, #10e32a, #dfa1e2);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    -o-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+    
+.menu {
+  float: left;
+  width: 15%;
+max-width: 100%;
+  height: auto;
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menuitem {
+  padding: 20px;
+  margin-top: 9px;
+  border-bottom: 1px solid #f1f1f1;
+
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.main {
+ background-color: lightblue;
+  float: left;
+  width: 60%;
+max-width: 100%;
+height: 25%;
+  padding: 10px 20px;
+  overflow: hidden;
+margin-top: 0.4px;
+margin-left: 1.5px;
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.rightD {
+  background-color: lightblue;
+    bottom:1;
+    right: 0;
+  float: right;
+  width: 24.8%;
+height: 25%;
+  padding: 18px 20px;
+  margin-top: 0.4px;
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.button {
+ max-width: 100%;
+  height: auto;
+display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 270px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button:hover {background-color: #3e8e41}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+ 
+  opacity: 1;
+  right: 0;
+}
+@media only screen and (max-width:900px) {
+  /* For mobiles: */
+  .main,.menuitem,img{
+    width: 80%;
+    padding: 10;
+
+  }
+  .menu,.button,.right ,.rightD,div{
+    width:100%;
+
+ padding: 20;
+  }
+
+}
+@media only screen and (max-width:1200px) {
+  /* For tablets: */
+  .main,.menuitem,img{
+    width: 80%;
+    padding: 10;
+
+  }
+  .menu,.button,.rightD,div,img{
+    width:100%;
+
+ padding: 20;
+  }
+
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right,.rightD,.menuitem ,img{
+    width: 100%;
+height: 150%;
+padding: 10;
+  }
+}
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+</style>
+
+<div style="padding:2px height="1";="">
+  <hr><center><div><h1><div style="background-color:#C1C795;text-align:center;padding:10px;margin-top:7px;font-size:15px;">*TODAYS UPDATES*</div></h1></div></center>
+<marquee bgcolor="LightBlue" direction="right"> <font size="6" color="blue" face="Fantasy">Happy Independence Day</font></marquee>
+</hr>
+
+<div style="overflow:auto">
+  <div class="menu">
+ <div class="menuitem button" style="background-color:rgba(255,160,100,0.8);"><span><a href="#" onclick="window.open ("popup.html","contact", "height=100,width=50,resizable=false") target="#CONTACT">CONTACT</a></button></span></div>
+    <div class="menuitem button" style="background-color:rgba(254,0,0,0.8);"><span><a href="D:\Cwebsite\WP1_files\Courses.html" target="">COURSES</a></button></span></div>
+    <div class="menuitem button" style="background-color:rgba(100,255,200,0.9);"><span><a href="D:\Cwebsite\WP1_files\CoursesPage7.html" target="">PACKAGES</a></span></button></div>
+    <div class="menuitem button" style="background-color:rgba(255,200,255,1);"><span><a href="" target="">PROJECTS</a></span></button></div>
+    <div class="menuitem button" style="background-color:rgba(55,200,255,1);"><span><a href="" target="">ABOUT</a></span></button></div>
+  </div>
+
+  <div class="main">
+    <h2>Why to choose C-family?</h2>
+    <marquee bgcolor="" scrollamount="1" direction="up" height="50%"><p>Software industry always needs highly talented professionals.<br>
+As you are well aware, many of the existing computer institutions are owned and run by bussiness men.<br>
+These commercial institutions are being rejected by software industry.<br>
+         C-Family was not set up by any bussiness group instead it was setup and successfully run by a group of eminent programmers.<br>
+We provide hands on training to ambitious students in right proportions to their passion for knowledge Needless to say,taking individual care of each student is the hallmark of our Institution.<br>
+Our courses are designed in such  a way that students get best foundation in logic and programming skills.</p></marquee>
+    <h2>
+</h2>
+    <p>
+</p>
+  </div>
+
+<div class="rightD">
+    <h2>Where is C-family?</h2>
+<div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.5410053976557!2d80.65316945084409!3d16.498763132108852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35fab89e09383d%3A0x3209e3a9817b2e3!2sC%20-%20Family%20Computer%20Education!5e0!3m2!1sen!2sin!4v1660476019766!5m2!1sen!2sin" width="100%" height="180" style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+<img src="./WP1_files/gpin.gif" width="100" height="100">
+    <p><a href="https://g.page/c---family-computer-education?share">#40-9/1-36,Vasavya Complex(2nd Floor),Dr.G.Samaram Hospital Building, Vasavya Nagar,BenzCircle(100 Feet to Benz Circle Ring),Vijayawada.</a></p>
+  </div>
+</div>
+
+
+
+<div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> visit our website again</div>
+
+
+
+</body></html>
